@@ -29,8 +29,6 @@ namespace IpAddressesAPI.Models
             modelBuilder.Entity<Country>()
                 .ToTable("Countries")  // Map to table Countries
                 .HasKey(c => c.Id);
-
-            // Optional: Configure additional properties or relationships
         }
     }
 }

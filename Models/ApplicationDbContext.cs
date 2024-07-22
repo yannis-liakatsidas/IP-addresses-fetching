@@ -21,7 +21,7 @@ namespace IpAddressesAPI.Models
 
             modelBuilder.Entity<IPAddress>()
                 .HasOne(ip => ip.Country)
-                .WithMany(c => c.IPAddresses) // Ensure Country has a collection of IpAddresses if needed
+                .WithMany(c => c.IPAddresses)
                 .HasForeignKey(ip => ip.CountryId)
                 .OnDelete(DeleteBehavior.Restrict); // Configure delete behavior
 
